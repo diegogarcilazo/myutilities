@@ -5,8 +5,7 @@ Version: 0.0.0.9015
 Date: 2017-01-04
 Author: Diego Augusto Garcilazo
 Maintainer: Diego Augusto Garcilazo <dgarcilazo@anlis.gov.ar>
-Description: Utilidades para interactuar con PostgreSQL y Excel de forma rapida
-    y conveniente en Windows
+Description: Features I've found useful
 License: GPL
 Depends:
     lubridate,

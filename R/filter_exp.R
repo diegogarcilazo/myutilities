@@ -14,7 +14,7 @@ filter_exp_ <- function(x, cond, var_list){
 
 filter_exp <- function(x, cond, ...){
   var_name = sapply(substitute(list(...))[-1], deparse);
-  return(filter_cond_(x = x, cond = cond, var_list = var_name));
+  return(filter_exp_(x = x, cond = cond, var_list = var_name));
 }
 
 my_filter_list <- list(
