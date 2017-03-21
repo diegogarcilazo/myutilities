@@ -70,8 +70,8 @@ pathPrep <- function(path = "clipboard") {
 #' @return copy the object as character in the clipboard
 #' @author freecube source:http://stackoverflow.com/questions/10959521/how-to-write-to-clipboard-on-ubuntu-linux-in-r
 
-cb_copyunix <- function(x, sep="\t", row.names=FALSE, col.names=TRUE){
+cb_copyunix <- function(x, sep="\t", dec = ',', row.names=FALSE, col.names=TRUE){
   con <- pipe("xclip -selection clipboard -i", open="w")
-  write.table(x, con, sep=sep, row.names=row.names, col.names=col.names)
+  write.table(x, con, sep=sep, dec = dec,row.names=row.names, col.names=col.names)
   close(con)
 }
