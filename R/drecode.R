@@ -23,15 +23,10 @@ drecode_ <- function(x, y, varx, vary, field, name = 'lab')
 
 drecode <- function(x, y,varx,vary,field,name = lab)
 {
-  varx = lazyeval::lazy(varx, x);
-  vary = lazyeval::lazy(vary, y);
+  varx = substitute(varx);
+  vary = substitute(vary);
   field = deparse(substitute(field));
   name = deparse(substitute(name));
   df <-  drecode_(x, y, varx, vary, field, name);
   return(df);
 }
-
-
-
-
-
