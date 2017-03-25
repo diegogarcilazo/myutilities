@@ -9,3 +9,4 @@ cb_paste(x, dec = ",", header = T)
 \description{
 Read excel table from clipboard.
 }
+

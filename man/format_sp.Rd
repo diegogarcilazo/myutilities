@@ -29,3 +29,4 @@ Spanish format print for labels and plus flag.
 \examples{
 format_sp(100.1238, 3, plus.flag = T)
 }
+

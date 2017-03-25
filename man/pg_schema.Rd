@@ -20,3 +20,4 @@ pg_schema(con, schema, first = NULL, second = NULL)
 \description{
 Summary of schema. Additionaly if use first and second arguments read table or view.
 }
+

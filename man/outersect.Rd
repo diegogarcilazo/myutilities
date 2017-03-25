@@ -21,3 +21,4 @@ vector: Set of elements which are in either of the sets and not in their interse
 outersect: The opposite of R's intersect function.
 Author: Tony Breyal example from http://www.r-bloggers.com/outersect-the-opposite-of-rs-intersect-function/.
 }
+

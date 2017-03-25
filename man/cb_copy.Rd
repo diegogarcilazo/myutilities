@@ -4,7 +4,7 @@
 \alias{cb_copy}
 \title{Copy data.frames, tables, xtabs, ftables, tbl_df to clipboard prepared for MS Excel.}
 \usage{
-cb_copy(x)
+cb_copy(x, ...)
 }
 \arguments{
 \item{x:}{data.frame, table, xtabs, ftable or tbl_df.}
@@ -12,3 +12,4 @@ cb_copy(x)
 \description{
 Copy data.frames, tables, xtabs, ftables, tbl_df to clipboard prepared for MS Excel.
 }
+

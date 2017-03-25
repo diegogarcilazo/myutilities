@@ -21,3 +21,4 @@ pg_export(con, query, dir = file.choose(new = T), encoding = "WIN1252",
 \description{
 Export query to CSV with delimiter tabular and header.
 }
+

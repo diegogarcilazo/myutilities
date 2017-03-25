@@ -23,3 +23,4 @@ pg_importxl(con, file = file.choose(), sheet = "Hoja 1", schema, table,
 \description{
 Read tabular data in excel file (xls or xlsx) and write it in PostgreSQL.
 }
+

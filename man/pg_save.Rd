@@ -18,3 +18,4 @@ pg_save(df, con, schema, table_name, overwrite = FALSE, append = FALSE)
 \description{
 Save data.frame into Postgresql
 }
+

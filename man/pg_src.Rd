@@ -16,3 +16,4 @@ pg_src(dbname = NULL, host = localhost, port = 5432, user = postgres)
 \description{
 Connection to postgresql via dplyr. The password is entered by .rs.askForPassword().
 }
+

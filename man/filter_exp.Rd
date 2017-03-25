@@ -12,7 +12,7 @@ filter_exp(x, cond, ...)
 \arguments{
 \item{x:}{data.frame}
 
-\item{cond:}{expression. Ex: ~codmuer%ilike%'M%%'. See my_filter_list for preestablished filters.}
+\item{cond:}{expression. Ex: ~codmuer%ilike%"M%%". See my_filter_list for preestablished filters.}
 
 \item{...:}{variables names. Ex: codmuer = cie10.}
 }
@@ -22,3 +22,4 @@ cie10 filter:
 tb = tuberculosis.
 fq = Cystic Fibrosis.
 }
+

@@ -4,7 +4,8 @@
 \alias{cb_copyunix}
 \title{Copy an object in the clipboard}
 \usage{
-cb_copyunix(x, sep = "\\t", row.names = FALSE, col.names = TRUE)
+cb_copyunix(x, sep = "\\t", dec = ",", row.names = FALSE,
+  col.names = TRUE)
 }
 \arguments{
 \item{sep}{The object to copy.}
@@ -24,3 +25,4 @@ Copy an object in the clipboard
 \author{
 freecube source:http://stackoverflow.com/questions/10959521/how-to-write-to-clipboard-on-ubuntu-linux-in-r
 }
+

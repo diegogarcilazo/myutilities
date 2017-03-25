@@ -27,3 +27,4 @@ age_cat(x, lower = 0, upper, by = 10, sep = "-", above.char = "+",
 function to categorize ages
 From http://www.r-bloggers.com/r-function-of-the-day-cut
 }
+

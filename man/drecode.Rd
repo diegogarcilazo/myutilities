@@ -25,3 +25,4 @@ data.frame with \code{x} fields and recoded field with \code{name}.
 \description{
 Recode throw traduction table. Check for inconsistency.
 }
+

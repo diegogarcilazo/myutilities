@@ -16,3 +16,4 @@ pg_con(dbname = NULL, user = postgres, host = localhost)
 \description{
 Connection to postgresql via RPostgreSQL. The password is entered by .rs.askForPassword().
 }
+

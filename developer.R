@@ -1,5 +1,6 @@
 devtools::document()
 devtools::use_testthat()
+devtools::test()
 
 #Ver como incorporar a drecode una lista (...) de columnas a agregar para poder meter varios campos de una sola tabla de traducción.
 #Agregar en vap.df cuatro columnas además de vap lwr upr que sean el p de las pruebas de linealidad.

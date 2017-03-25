@@ -26,3 +26,4 @@ pg_dplyr_tbl(dbname = NULL, schema = public, table = NULL,
 \description{
 Read table from postgresql via dplyr. The password is entered by .rs.askForPassword().
 }
+

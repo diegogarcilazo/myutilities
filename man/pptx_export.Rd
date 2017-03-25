@@ -19,3 +19,4 @@ pptx_export(plot, template = file.choose(), design_name,
 \description{
 Export plot to pptx
 }
+
