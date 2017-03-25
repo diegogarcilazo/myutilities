@@ -9,7 +9,7 @@ filter_exp_ <- function(x, cond, var_list){
 #' tb = tuberculosis.
 #' fq = Cystic Fibrosis.
 #' @param x: data.frame
-#' @param cond: expression. Ex: ~codmuer%ilike%'M%%'. See my_filter_list for preestablished filters.
+#' @param cond: expression. Ex: ~codmuer%ilike%"M%%". See my_filter_list for preestablished filters.
 #' @param ...: variables names. Ex: codmuer = cie10.
 
 filter_exp <- function(x, cond, ...){
