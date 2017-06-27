@@ -22,4 +22,3 @@ cie10 filter:
 tb = tuberculosis.
 fq = Cystic Fibrosis.
 }
-

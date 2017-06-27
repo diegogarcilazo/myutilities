@@ -12,4 +12,3 @@ cb_copy(x, ...)
 \description{
 Copy data.frames, tables, xtabs, ftables, tbl_df to clipboard prepared for MS Excel.
 }
-

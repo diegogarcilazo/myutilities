@@ -13,4 +13,3 @@ function that read path on windows from clipboard prepares it for R and paste it
 Copy path
 directory <- pathPrep() or paste it on script
 }
-

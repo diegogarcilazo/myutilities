@@ -30,4 +30,3 @@ Some problems with Inf values in y were observed.
 \details{
 Lineal model tests: SW = residual normality by Shapiro Wilks. BP: Performs the Breusch-Pagan test against heteroskedasticity. HC: Harvey-Collier test for linearity. DW: Computes bootstrapped p-values for residual autocorrelations and generalized Durbin-Watson statistics.
 }
-

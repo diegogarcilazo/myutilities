@@ -17,4 +17,3 @@ ordered factor with age groups.
 \description{
 recode age group from two variables age and code_age. Assume code_age levels 1 = years, 2 = months, 3 = days, 4 = hours, 5 = minutes.
 }
-

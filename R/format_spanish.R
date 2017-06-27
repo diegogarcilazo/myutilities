@@ -18,3 +18,13 @@ format_sp <- function(x, digits = 2 , dec = ',', big.mark = '.', plus.flag = F, 
   }
   return(label)
 }
+
+
+#' Remove accents.
+#' @param x character.
+#' @param id a single string with transform identifier, see stringi::stri_trans_list.
+#' @examples 
+#' acc_rm('бън')
+
+acc_rm <- function(x, id) stringi::stri_trans_general(x, id = "Latin-ASCII")
+

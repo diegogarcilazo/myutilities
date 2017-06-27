@@ -15,4 +15,3 @@ numeric: week number
 \description{
 Return epi - week from date. Weeks start on sunday.
 }
-

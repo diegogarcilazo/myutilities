@@ -16,4 +16,3 @@ pct_se(pct, n, alpha = 0.05)
 \description{
 Standard Error from percentege.
 }
-

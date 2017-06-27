@@ -25,4 +25,3 @@ Copy an object in the clipboard
 \author{
 freecube source:http://stackoverflow.com/questions/10959521/how-to-write-to-clipboard-on-ubuntu-linux-in-r
 }
-
