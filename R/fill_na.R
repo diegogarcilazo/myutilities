@@ -1,1 +1,0 @@
-fill_na = function(x, value = 0) ifelse(is.na(x), value, x)

@@ -1,6 +1,6 @@
 warn_diff<- function(varx, vary){
-  vary_name <- deparse(substitute(vary));
-  varx_name <- deparse(substitute(varx));
+  vary_name <- vary;
+  varx_name <- varx;
   varx_u <- unique(varx)
   vary_u <- unique(vary)
   varx_diff <- setdiff(varx_u, vary_u);
