@@ -13,7 +13,7 @@ devtools::use_data(gedadesn16,gedadesn18,gedadesn17,
                    internal = T)
 
 devtools::use_package('magrittr')
-devtools::use_package('car')
+devtools::use_package('stringi')
 devtools::use_package('lmtest')
 devtools::use_package('lubridate')
 devtools::use_package('ReporteRs')
