@@ -36,3 +36,12 @@ write(jsonlite::toJSON(my_list, pretty = T), 'my_json.json')
 readlines <- readLines(file('my_json.json'), warn = FALSE)
 parse <- jsonlite::fromJSON(readlines)
 
+
+#error en mutate_if
+
+a = function(x) 
+
+dplyr::mutate_if(data.frame(a = 1:10, f = letters[1:10]), 
+                  is.factor, dplyr::funs(as.integer, as.character)) %>% 
+  dplyr::glimpse()
+
