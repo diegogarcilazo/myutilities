@@ -3,6 +3,7 @@
 #' 
 
 cb_copy <-  function (x, ...) UseMethod('cb_copy', x);
+
 is.ftable <- function(x, ...) inherits(x, "ftable");
 is.xtabs <- function(x, ...) inherits(x, "xtabs");
 is.tbl_df <- function(x, ...) inherits(x, "tbl_df");

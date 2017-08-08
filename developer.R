@@ -45,3 +45,12 @@ dplyr::mutate_if(data.frame(a = 1:10, f = letters[1:10]),
                   is.factor, dplyr::funs(as.integer, as.character)) %>% 
   dplyr::glimpse()
 
+
+library(tidyverse)
+
+
+a = tibble(a = 1:5, l = letters[1:5])
+
+
+
+is.data.frame(a)
