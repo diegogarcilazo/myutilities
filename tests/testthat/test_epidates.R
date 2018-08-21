@@ -1,4 +1,4 @@
-
+context("EpiDates")
 
 testthat::test_that(
   "epidates_date2week with problems", 

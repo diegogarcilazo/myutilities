@@ -3,7 +3,6 @@
 #' 
 
 cb_copy <-  function (x, ...) UseMethod('cb_copy', x);
-
 is.ftable <- function(x, ...) inherits(x, "ftable");
 is.xtabs <- function(x, ...) inherits(x, "xtabs");
 is.tbl_df <- function(x, ...) inherits(x, "tbl_df");
@@ -45,22 +44,6 @@ cb_paste <- function(x, dec = ',', header = T){
              stringsAsFactors = F)
   }
 
-#' function that read path on windows from clipboard prepares it for R and paste it in clipboard.
-#' Copy path
-#' directory <- pathPrep() or paste it on script
-
-pathPrep <- function(path = "clipboard") {
-  y <- if (path == "clipboard") {
-    readClipboard()
-  } else {
-    cat("Please enter the path:\n\n")
-    readline()
-  }
-  x <- chartr("\\", "/", y)
-  x2<-paste0("'",x,'/',"'")
-  writeClipboard(x2)
-  return(invisible(x2))
-}
 
 #' @title Copy an object in the clipboard
 #' @description Copy an object in the clipboard

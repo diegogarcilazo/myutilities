@@ -11,4 +11,3 @@ outersect <- function(x, y, ...) {
   duplicates <- big.vec[duplicated(big.vec)]
   setdiff(big.vec, unique(duplicates))
 }
-
