@@ -30,3 +30,23 @@ write(jsonlite::toJSON(my_list, pretty = T), 'my_json.json')
 readlines <- readLines(file('my_json.json'), warn = FALSE)
 parse <- jsonlite::fromJSON(readlines)
 
+
+
+
+library(rlang)
+library(magrittr)
+
+df <- data.frame(a = 1:3, b = letters[1:3])
+
+
+a = c(10, 5, 3)
+
+
+f <- function(x){paste0("mean(",deparse(x),")") %>% parse(text = .)}
+
+f(a) %>% 
+  eval()
+
+
+
+call("print", list(a))
