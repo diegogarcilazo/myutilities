@@ -9,7 +9,7 @@ devtools::install_github("diegogarcilazo/myutilities")
 devtools::use_data(internal = T)
 devtools::use_package('magrittr')
 devtools::use_package('lmtest')
-usethis::use_package('classInt')
+usethis::use_package('RColorBrewer')
 
 
 givesWarning <- function(expr){

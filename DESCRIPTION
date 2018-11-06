@@ -12,7 +12,8 @@ Imports:
     lmtest,
     lubridate,
     magrittr,
-    classInt
+    classInt,
+    RColorBrewer
 Suggests:
     testthat
 RoxygenNote: 6.1.0
