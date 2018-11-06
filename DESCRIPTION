@@ -1,18 +1,18 @@
 Package: myutilities
 Type: Package
 Title: Paquete con utilidades variadas.
-Version: 0.0.0.9026
+Version: 0.0.0.9028
 Date: 2017-06-27
 Author: Diego Augusto Garcilazo
 Maintainer: Diego Augusto Garcilazo <dgarcilazo@anlis.gov.ar>
 Description: Features I've found useful
 License: GPL
-Depends:
-    lubridate,
-    magrittr
 Imports:
     lazyeval,
     lmtest,
+    lubridate,
+    magrittr,
+    classInt
 Suggests:
     testthat
 RoxygenNote: 6.1.0
