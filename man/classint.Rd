@@ -5,7 +5,7 @@
 \title{Create vector with Interval Class from classIntervals functions}
 \usage{
 classint(var, n, style = "quantile", labels = NULL,
-  include.lowest = T)
+  include.lowest = T, brks = NULL)
 }
 \arguments{
 \item{var}{numeric: variable to apply class intervals.}
@@ -16,10 +16,9 @@ classint(var, n, style = "quantile", labels = NULL,
 
 \item{labels:}{chr vector with labels for class.}
 
-\item{include.lowest:}{logical, indicating if an equal to the lowest}
-}
-\value{
-factor.
+\item{include.lowest:}{logical, indicating if an ???x[i]??? equal to the lowest}
+
+\item{brks:}{vector of the same length of n with breaks numbers. Work in the same way that argument breaks from cut function.}
 }
 \description{
 Create vector with Interval Class from classIntervals functions
