@@ -1,12 +1,12 @@
 devtools::document()
-devtools::use_testthat()
+usethis::use_testthat()
 devtools::test()
 devtools::install_github("diegogarcilazo/myutilities")
 
-#Agregar en vap.df cuatro columnas además de vap lwr upr que sean el p de las pruebas de linealidad.
+#Agregar en vap.df cuatro columnas adem?s de vap lwr upr que sean el p de las pruebas de linealidad.
+rm(list = c("consec_date", "create_labs", "scale_brewer_pal"))
 
-
-devtools::use_data(internal = T)
+usethis::use_data(stn, internal = T)
 devtools::use_package('magrittr')
 devtools::use_package('lmtest')
 usethis::use_package('RColorBrewer')
@@ -44,6 +44,14 @@ new_var <- "myname"
 summarise(starwars, !!new_var := sum(!!var, na.rm = T))
 
 
-
+# "/home/diego/Dropbox/Rprojects/fq_reg/funs.R"
+# "/home/diego/Dropbox/Rprojects/my_dev/easymaps/R/functions.R"
+# "/home/diego/Dropbox/Rprojects/saludMaternoInfantilER/mi/Rnotebook/funs.R"
+# "/home/diego/Dropbox/Rprojects/db_def/funs.R"
+# "/home/diego/Dropbox/Rprojects/fq_def/fun.R"
+# "/home/diego/Dropbox/Rprojects/bioestadistica/funs.R"
+# "/home/diego/Dropbox/Rprojects/dashboards/dashboard_ss/funs/functions.R"
+# "/home/diego/Dropbox/Rprojects/dashboards/epidemio/functions/functions.R"
+# "/home/diego/Dropbox/Enrique_Jorge/dashboard_ss/funs/functions.R"
 
 

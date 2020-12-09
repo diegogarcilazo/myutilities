@@ -4,8 +4,14 @@
 \alias{classint}
 \title{Create vector with Interval Class from classIntervals functions}
 \usage{
-classint(var, n, style = "quantile", labels = NULL,
-  include.lowest = T, brks = NULL)
+classint(
+  var,
+  n,
+  style = "quantile",
+  labels = NULL,
+  include.lowest = T,
+  brks = NULL
+)
 }
 \arguments{
 \item{var}{numeric: variable to apply class intervals.}

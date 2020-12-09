@@ -4,8 +4,12 @@
 \alias{DateToInt}
 \title{Calculate interval unit from dates.}
 \usage{
-DateToInt(from, to = as.Date(lubridate::today()), units = "years",
-  floor = FALSE)
+DateToInt(
+  from,
+  to = as.Date(lubridate::today()),
+  units = "years",
+  floor = FALSE
+)
 }
 \arguments{
 \item{from}{first date. Date object}

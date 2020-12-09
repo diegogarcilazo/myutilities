@@ -4,8 +4,7 @@
 \alias{format_sp}
 \title{Spanish format print for labels and plus flag.}
 \usage{
-format_sp(x, digits = 2, dec = ",", big.mark = ".", plus.flag = F,
-  flag = NULL)
+format_sp(x, digits = 2, dec = ",", big.mark = ".", plus.flag = F, flag = NULL)
 }
 \arguments{
 \item{x}{numeric to format spanish type}

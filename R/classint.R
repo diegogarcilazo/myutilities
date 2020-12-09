@@ -24,3 +24,4 @@ classint <- function(var, n, style = 'quantile', labels = NULL, include.lowest =
   
   return(vect_class);
 }
+

@@ -7,24 +7,37 @@ vap <- function(x, ...) UseMethod('vap',x)
 #' @details Lineal model tests: SW = residual normality by Shapiro Wilks. BP: Performs the Breusch-Pagan test against heteroskedasticity. HC: Harvey-Collier test for linearity. DW: Computes bootstrapped p-values for residual autocorrelations and generalized Durbin-Watson statistics.
 #' @return vector. vap: annual percent change. lwr: lower IC 95%. upr: upper IC 95%.
 
-vap.numeric<-function(x, y, tests = FALSE){
-  stopifnot(is.numeric(x));
-  y[is.infinite(y)]<-NA; #Transforma los Inf en NA
-  y[y==0]<-NA; #Transforma los 0 en NA
-  log(y)->logtasa; #Logaritmo
-  datos<-data.frame(x,logtasa); #tabla de datos
-  datos<-na.omit(datos); #Omite los NA de la tabla de datos
-  lmdatos<-lm(logtasa~x,data=datos);#Aplica el modelo lineal
-  es <- qt(0.975,lmdatos$df.residual)*summary(lmdatos)$coefficients[2,2];#ERROR ESTANDAR
-  vap <- summary(lmdatos)$coefficients[2,1];
-  vec <- c(vap = vap, es = es, lwr = vap-es, upr = vap + es);
-  vaps <- round((1-exp(vec))*-100, 2);
+vap.numeric <- function(x, y, tests = FALSE){
+  
+  stopifnot(is.numeric(x)) #numeric var for time.
+  
+  y[is.infinite(y)] <- NA; #Transforma los Inf en NA
+  y[y==0] <- NA; #Transforma los 0 en NA
+  log(y) -> logtasa; #Logaritmo
+  
+  datos <- data.frame(x,logtasa) #tabla de datos
+  
+  datos <- na.omit(datos) #Omite los NA de la tabla de datos
+  
+  lmdatos<-lm(logtasa~x, data=datos) #Aplica el modelo lineal
+  
+  es <- qt(0.975, lmdatos$df.residual) * summary(lmdatos)$coefficients[2,2] #ERROR ESTANDAR
+  
+  vap <- summary(lmdatos)$coefficients[2,1]
+  
+  vec <- c(vap = vap, es = es, lwr = vap-es, upr = vap + es)
+  
+  vaps <- round((1-exp(vec))*-100, 2)
   
   if(tests == T){
-    shapiro <- stats::shapiro.test(residuals(lmdatos));
-    bpagan <- lmtest::bptest(lmdatos);
-    harv <- lmtest::harvtest(lmdatos);
-    dw <- car::durbinWatsonTest(lmdatos);
+    shapiro <- stats::shapiro.test(residuals(lmdatos))
+    
+    bpagan <- lmtest::bptest(lmdatos)
+    
+    harv <- lmtest::harvtest(lmdatos)
+    
+    dw <- car::durbinWatsonTest(lmdatos)
+    
     tests <- c(SW = as.numeric(formatC(shapiro$p.value,width = 2,digits = 2, format = 'f')),
                BP = as.numeric(formatC(bpagan$p.value, width = 2,digits = 2, format = 'f')),
                HC = as.numeric(formatC(harv$p.value, width = 2,digits = 2, format = 'f')),
@@ -66,21 +79,4 @@ vap_ <-function(df, x, y, tests = FALSE){
 vap.data.frame <- function(df, x, y, tests = F){
   stopifnot(is.data.frame(df));
   vap_(df, lazyeval::lazy(x), lazyeval::lazy(y), tests = tests);
-}
-
-
-vap_by_ <- function(df, by, x, y, tests = FALSE){
-  by = lazyeval::lazy_eval(by, df);
-  l <-do.call(rbind, by(df, by, function(n) vap(n[,x], n[,y], tests = tests)));
-  df1 <- as.data.frame(l);
-  df2 <- cbind(group = rownames(df1), df1);
-  rownames(df2) <- NULL;
-  return(df2)
-}
-
-vap_by <- function(df, by, x, y, tests = F) {
-  by = lazyeval::lazy(by);
-  x = deparse(substitute(x));
-  y = deparse(substitute(y));
-  vap_by_(df, by, x, y, tests = tests)
 }

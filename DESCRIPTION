@@ -1,7 +1,7 @@
 Package: myutilities
 Type: Package
-Title: Paquete con utilidades variadas.
-Version: 0.0.0.9028
+Title: Collection of functions that I use frequently.
+Version: 0.0.0.9029
 Date: 2017-06-27
 Author: Diego Augusto Garcilazo
 Maintainer: Diego Augusto Garcilazo <dgarcilazo@anlis.gov.ar>
@@ -12,8 +12,14 @@ Imports:
     lmtest,
     lubridate,
     magrittr,
+    purrr,
+    glue,
     classInt,
-    RColorBrewer
+    RColorBrewer,
+    stringi,
+    car, 
+    lmtest,
+    slider
 Suggests:
     testthat
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1

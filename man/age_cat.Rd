@@ -5,8 +5,7 @@
 \title{function to categorize ages
 From http://www.r-bloggers.com/r-function-of-the-day-cut}
 \usage{
-age_cat(x, lower = 0, upper, by = 10, sep = "-", above.char = "+",
-  style = 1)
+age_cat(x, lower = 0, upper, by = 10, sep = "-", above.char = "+", style = 1)
 }
 \arguments{
 \item{x:}{Vector with age as numeric.}
