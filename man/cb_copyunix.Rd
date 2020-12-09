@@ -4,17 +4,14 @@
 \alias{cb_copyunix}
 \title{Copy an object in the clipboard}
 \usage{
-cb_copyunix(x, sep = "\\t", dec = ",", row.names = FALSE,
-  col.names = TRUE)
+cb_copyunix(x, sep = "\\t", dec = ",", row.names = FALSE, col.names = TRUE)
 }
 \arguments{
-\item{sep}{The object to copy.}
+\item{sep}{A character to be used as separator for each column of the object}
 
 \item{row.names}{Copy row names (default is FALSE)}
 
 \item{col.names}{Copy column names (default is TRUE)}
-
-\item{sep}{A character to be used as separator for each column of the object}
 }
 \value{
 copy the object as character in the clipboard
