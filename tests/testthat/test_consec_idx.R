@@ -1,13 +1,15 @@
-context("consec_date")
+testthat::context("consec_idx")
+
+library(magrittr)
 
 set.seed(1234)
-complete_ts <- tibble(
+complete_ts <- tibble::tibble(
   ts = seq(as.Date("2020-03-08"), as.Date("2020-06-06"), 1),
   values = runif(vctrs::vec_size(ts), 0L, 10L) %>% as.integer()
 )
 
 set.seed(1234)
-incomplete_ts <- tibble(
+incomplete_ts <- tibble::tibble(
   ts = seq(as.Date("2020-03-08"), as.Date("2020-06-06"), 2),
   values = runif(vctrs::vec_size(ts), 0L, 10L) %>% as.integer()
 )
@@ -17,13 +19,12 @@ incomplete_ts <- tibble(
 testthat::test_that(
   "consec_date test with complete data.",
   testthat::expect_equal(
-    consec_date(complete_ts$ts, complete_ts$values, 0, 5), 
+    min(consec_idx(complete_ts$ts, complete_ts$values, .x > 0, 5)), 
     as.Date("2020-03-08"))
 )
 
 testthat::test_that(
   "consec_date test with incomplete data.",
-  testthat::expect_equal(
-    consec_date(incomplete_ts$ts, incomplete_ts$values, 0, .after = 3), 
-    as.Date("2020-03-08"))
+  testthat::expect_message(
+    consec_idx(incomplete_ts$ts, incomplete_ts$values, .x > 0, .after = 3))
 )

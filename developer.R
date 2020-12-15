@@ -4,8 +4,6 @@ devtools::test()
 devtools::install_github("diegogarcilazo/myutilities")
 
 #Agregar en vap.df cuatro columnas adem?s de vap lwr upr que sean el p de las pruebas de linealidad.
-rm(list = c("consec_date", "create_labs", "scale_brewer_pal"))
-
 usethis::use_data(stn, internal = T)
 devtools::use_package('magrittr')
 devtools::use_package('lmtest')

@@ -22,7 +22,7 @@ compare_c <- function(c_to_compare, c_standard){
   cat('     Required elements n = ');cat(length(c_standard),'\n')
   cat('====================================\n')
   
-  walk2(c_standard, c_explain, 
+  purrr::walk2(c_standard, c_explain, 
         ~ cat(.x,.y, sep = ' = ') %>% cat(sep = '\n'))
   
   cat('====================================\n')  
@@ -42,5 +42,6 @@ compare_c <- function(c_to_compare, c_standard){
     cat(paste0(c_absent,' = ___ ,'), sep = '\n')
     cat('\n)')}
   
-  invisible(list(absent_cols = c_absent, outer_cols = c_outer))
+  invisible(list(present_elements = c_standard[c_logic], 
+                 absent_elements = c_absent, outer_elements = c_outer))
 }

@@ -1,7 +1,7 @@
 Package: myutilities
 Type: Package
 Title: Collection of functions that I use frequently.
-Version: 0.0.0.9029
+Version: 0.0.0.9030
 Date: 2017-06-27
 Author: Diego Augusto Garcilazo
 Maintainer: Diego Augusto Garcilazo <dgarcilazo@anlis.gov.ar>
@@ -17,9 +17,10 @@ Imports:
     classInt,
     RColorBrewer,
     stringi,
-    car, 
+    car,
     lmtest,
-    slider
+    slider,
+    rlang
 Suggests:
     testthat
 RoxygenNote: 7.1.1
