@@ -1,5 +1,5 @@
 devtools::document()
-usethis::use_testthat()
+# usethis::use_testthat()
 devtools::test()
 devtools::install_github("diegogarcilazo/myutilities")
 
@@ -40,16 +40,4 @@ filter(starwars, birth_)
 #namey
 new_var <- "myname"
 summarise(starwars, !!new_var := sum(!!var, na.rm = T))
-
-
-# "/home/diego/Dropbox/Rprojects/fq_reg/funs.R"
-# "/home/diego/Dropbox/Rprojects/my_dev/easymaps/R/functions.R"
-# "/home/diego/Dropbox/Rprojects/saludMaternoInfantilER/mi/Rnotebook/funs.R"
-# "/home/diego/Dropbox/Rprojects/db_def/funs.R"
-# "/home/diego/Dropbox/Rprojects/fq_def/fun.R"
-# "/home/diego/Dropbox/Rprojects/bioestadistica/funs.R"
-# "/home/diego/Dropbox/Rprojects/dashboards/dashboard_ss/funs/functions.R"
-# "/home/diego/Dropbox/Rprojects/dashboards/epidemio/functions/functions.R"
-# "/home/diego/Dropbox/Enrique_Jorge/dashboard_ss/funs/functions.R"
-
 

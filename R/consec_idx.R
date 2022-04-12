@@ -27,7 +27,7 @@ consec_idx <- function(index, value, expr, .after = 7, .f = "min",
     value = value
   ) %>%
     dplyr::arrange(index) %>%
-    complete(index = seq(min(index), max(index), 1),
+    tidyr::complete(index = seq(min(index), max(index), 1),
              fill = list(value = 0))
   vector <- slider::slide_lgl(df$value, rlang::eval_tidy(f),
                               .after = .after - 1,

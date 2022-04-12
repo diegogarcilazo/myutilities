@@ -20,7 +20,7 @@ age_cat(x, lower = 0, upper, by = 10, sep = "-", above.char = "+", style = 1)
 
 \item{above.char:}{default "+".}
 
-\item{style:}{1 = '50 - 54', 2 = '50', 3 = '11'}
+\item{style:}{1 = '50 - 54', 2 = '50', 3 = '11'.}
 }
 \description{
 function to categorize ages

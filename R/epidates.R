@@ -33,3 +33,27 @@ epidates_date2week <- function(date)
   
   return(epi_week)
 }
+
+
+
+#' Return date from excel number.
+#' @param numeric: number vector
+#' @return date: date
+
+dx_asDate <- function(x) {
+  stopifnot(is.numeric(x))
+  as.Date(x, origin="1899-12-30")
+}
+
+
+#' Return excel number from date.
+#' @param date: Date vector
+#' @return numeric: number
+
+dx_toNumber <- function(x) {
+  stopifnot(lubridate::is.Date(x))
+  as.numeric(x - dx_asDate(0))
+}
+
+
+

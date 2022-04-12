@@ -9,7 +9,7 @@ rm_acc(x, id)
 \arguments{
 \item{x}{character.}
 
-\item{id}{a single string with transform identifier, see stringi::stri_trans_list.}
+\item{id}{a single string with transform identifier, see stringi::stri_trans_list. Default "Latin-ASCII"}
 }
 \description{
 Remove accents.
