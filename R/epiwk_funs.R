@@ -1,5 +1,5 @@
-# Funciones para trabajar con semanas epidemiolÃ³gicas
-
+#' Funciones para trabajar con semanas epidemiológicas
+require(clock)
 
 
 #' @description
@@ -15,7 +15,7 @@ epiwk_asDate <- function(year, week){
     as.Date()
 }
 
-
+#' Function epiwk_int
 #' @description
 #' This function returns a vector with the dates of the week in date data type 
 #' when the year and week are entered in integer format.
@@ -33,6 +33,12 @@ epiwk_int <- function(year, weeks) {
 }
 
 
+
+#' @description
+#' This function returns a calendar 
+#' @param year <int> year
+#' @return <tibble> tibble
+
 epiwk_calendar <- function(year) {
   map(1:53, \(x) epiwk_int(year, x)) |> 
   bind_rows() |> 
@@ -45,7 +51,11 @@ epiwk_calendar <- function(year) {
     relocate(week, year_start, .before = 1)
   }
 
-
+#' @description
+#' This function returns a calendar 
+#' @param year <int> year
+#' @return <tibble> tibble
+#' 
 epiwk_dates <- function(year){
   map(1:53, \(x) epiwk_int(year, x)) |> 
     bind_rows() |> 

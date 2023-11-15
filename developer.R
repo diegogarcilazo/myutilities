@@ -1,4 +1,5 @@
 devtools::document()
+usethis::use_package_doc()
 # usethis::use_testthat()
 devtools::test()
 devtools::install_github("diegogarcilazo/myutilities")

@@ -5,7 +5,7 @@ Version: 0.0.0.9032
 Date: 2017-06-27
 Author: Diego Augusto Garcilazo
 Maintainer: Diego Augusto Garcilazo <dgarcilazo@anlis.gov.ar>
-Description: Features I've found useful
+Description: Functions that have been useful to me in my day-to-day work in epidemiology
 License: GPL
 Imports:
     lazyeval,

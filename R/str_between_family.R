@@ -35,4 +35,3 @@ str_view_between <- str_between_factory("str_view")
  
 str_remove_between <- str_between_factory("str_remove")
 
-#' Test functions
