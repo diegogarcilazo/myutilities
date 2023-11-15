@@ -57,3 +57,15 @@ epiwk_dates <- function(year){
     tidyr::pivot_longer(-week) |> 
     dplyr::rename(wday = name, date = value)
 }
+
+
+#' Return the first day of the week that x <date> is in.
+#' @param x <date>
+#' @return First day of the week
+
+epiwk_floor <- function(x){
+  stopifnot(inherits(x, "Date"))
+  cut(x, "week", start.on.monday = F) |> 
+    as.Date()
+}
+
