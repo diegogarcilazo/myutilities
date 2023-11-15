@@ -1,4 +1,0 @@
-exportPattern("^[[:alpha:]]+")
-importFrom("magrittr","%>%")
-importFrom("lubridate","%m+%")
-importFrom("lubridate","%m-%")
