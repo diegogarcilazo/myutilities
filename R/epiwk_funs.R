@@ -35,7 +35,7 @@ epiwk_int <- function(year, weeks) {
 #' @return <tibble> tibble
 
 epiwk_calendar <- function(year) {
-  map(1:53, \(x) epiwk_int(year, x)) |> 
+  purrr::map(1:53, \(x) epiwk_int(year, x)) |> 
   dplyr::bind_rows() |> 
     dplyr::mutate(
       week = pick(1)[[1]] |> epiweek(),
