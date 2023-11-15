@@ -1,4 +1,7 @@
-#' Return month from year and week
+#' @title Return month from year and week
+#' @description
+#' [Deprecated] Use epiwk_asDate and lubridate::month
+#' 
 #' @param year: int year with format YYYY.
 #' @param week: int week number.
 #' @return month as integer.
@@ -18,7 +21,10 @@ epidates_yw2month <- function(year, week){
   return(monthOfweek)
 }
 
-#' Return epi - week from date. Weeks start on sunday.
+#' @title Return epi - week from date. Weeks start on sunday.
+#' @description
+#' [Deprecated]: Use epiweek or isoweek from lubridate package
+#' 
 #' @param date: Date object
 #' @return numeric: week number
 
@@ -33,7 +39,6 @@ epidates_date2week <- function(date)
   
   return(epi_week)
 }
-
 
 
 #' Return date from excel number.
