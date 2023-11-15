@@ -2,7 +2,8 @@
 % Please edit documentation in R/epiwk_funs.R
 \name{epiwk_int}
 \alias{epiwk_int}
-\title{Function epiwk_int}
+\title{This function returns a vector with the dates of the week in date data type 
+when the year and week are entered in integer format.}
 \usage{
 epiwk_int(year, weeks)
 }

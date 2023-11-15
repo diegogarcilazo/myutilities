@@ -1,4 +1,3 @@
-#' @description
 #' Period between two dates with format
 #' @param from <date>
 #' @param to <date>
