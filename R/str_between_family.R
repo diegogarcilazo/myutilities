@@ -1,5 +1,5 @@
 #' Function str between family
-
+require(stringr)
 #' Function factory 
 #' Make the str_between family
 #' @param chr function name
