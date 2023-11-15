@@ -24,7 +24,7 @@ epiwk_int <- function(year, weeks) {
     year = as.numeric(year), 
     week = as.numeric(weeks))
   vec_days <- first_date + 0L:6L # add weekdays with names
-  names(vec_days) <- clock::weekdays(vec_days, abbreviate = T)
+  names(vec_days) <- weekdays(vec_days, abbreviate = T)
   return(vec_days)
 }
 
