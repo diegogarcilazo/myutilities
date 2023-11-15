@@ -38,9 +38,9 @@ epiwk_calendar <- function(year) {
   purrr::map(1:53, \(x) myutilities::epiwk_int(year, x)) |> 
   dplyr::bind_rows() |> 
     dplyr::mutate(
-      week = pick(1)[[1]] |> epiweek(),
-      year_end = pick(7)[[1]] |> year(),
-      year_start = pick(1)[[1]] |> year(),
+      week = pick(1)[[1]] |> lubridate::epiweek(),
+      year_end = pick(7)[[1]] |> lubridate::year(),
+      year_start = pick(1)[[1]] |> lubridate::year(),
       dplyr::across(1:7, \(x) format(x, "%d %b"))
     ) |> 
     dplyr::relocate(week, year_start, .before = 1)
