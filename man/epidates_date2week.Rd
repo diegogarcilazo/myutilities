@@ -13,5 +13,5 @@ epidates_date2week(date)
 numeric: week number
 }
 \description{
-Return epi - week from date. Weeks start on sunday.
+[Deprecated]: Use epiweek or isoweek from lubridate package
 }

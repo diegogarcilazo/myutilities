@@ -15,5 +15,5 @@ epidates_yw2month(year, week)
 month as integer.
 }
 \description{
-Return month from year and week
+[Deprecated] Use epiwk_asDate and lubridate::month
 }
