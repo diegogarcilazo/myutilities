@@ -2,10 +2,17 @@
 % Please edit documentation in R/str_between_family.R
 \name{str_between_factory}
 \alias{str_between_factory}
-\title{Function str between family}
+\title{Function str between family
+Function factory 
+Make the str_between family}
 \usage{
 str_between_factory(fns)
 }
+\arguments{
+\item{chr}{function name}
+}
 \description{
 Function str between family
+Function factory 
+Make the str_between family
 }
