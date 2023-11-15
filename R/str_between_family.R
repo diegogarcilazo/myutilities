@@ -1,5 +1,5 @@
 #' Function str between family
-
+require(stringr)
 str_between_factory <- function(fns){
   function(x, left, right) {
     eval(call(fns, x, glue::glue('(?<={left})(.*)(?={right})')))
