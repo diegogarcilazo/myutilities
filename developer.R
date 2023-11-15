@@ -7,8 +7,11 @@ devtools::install_github("diegogarcilazo/myutilities")
 usethis::use_data(stn, internal = T)
 devtools::use_package('magrittr')
 devtools::use_package('lmtest')
-usethis::use_package('RColorBrewer')
+usethis::use_package('clock')
+usethis::use_package('tidyr')
 
+library(dplyr)
+library(lubridate)
 
 givesWarning <- function(expr){
   tryCatch(eval(expr),
