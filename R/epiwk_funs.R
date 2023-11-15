@@ -20,7 +20,7 @@ epiwk_asDate <- function(year, week){
 #' @return <date> vector day of the week
 
 epiwk_int <- function(year, weeks) {
-  first_date <- epiwk_asDate(
+  first_date <- myutilities::epiwk_asDate(
     year = as.numeric(year), 
     week = as.numeric(weeks))
   vec_days <- first_date + 0L:6L # add weekdays with names
@@ -35,7 +35,7 @@ epiwk_int <- function(year, weeks) {
 #' @return <tibble> tibble
 
 epiwk_calendar <- function(year) {
-  purrr::map(1:53, \(x) epiwk_int(year, x)) |> 
+  purrr::map(1:53, \(x) myutilities::epiwk_int(year, x)) |> 
   dplyr::bind_rows() |> 
     dplyr::mutate(
       week = pick(1)[[1]] |> epiweek(),
@@ -51,9 +51,9 @@ epiwk_calendar <- function(year) {
 #' @return <tibble> tibble
 #' 
 epiwk_dates <- function(year){
-  purrr::map(1:53, \(x) epiwk_int(year, x)) |> 
+  purrr::map(1:53, \(x) myutilities::epiwk_int(year, x)) |> 
     dplyr::bind_rows() |> 
-    dplyr::mutate(week = pick(7)[[1]] |> epiweek()) |> 
+    dplyr::mutate(week = pick(7)[[1]] |> lubridate::epiweek()) |> 
     tidyr::pivot_longer(-week) |> 
     dplyr::rename(wday = name, date = value)
 }
