@@ -7,8 +7,7 @@
 #' @return character vector.
 
 create_labs <- function(lower, upper, by, above.char, sep){
-  c(paste(seq(lower, upper - by, by = by),
-          seq(lower + by - 1, upper - 1, by = by),
-          sep = sep),
-    paste(upper, above.char, sep = ""))
+  a <- seq(lower, upper - by, by = by)
+  c(stringr::str_glue("{a}{sep}{a + (by - 1)}"), 
+    stringr::str_glue("{upper}{above.char}"))
 }

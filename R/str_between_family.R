@@ -1,15 +1,15 @@
 ## Function str between family
 require(stringr)
 
-
-
 #' @title Function factory 
 #' @description
 #' Make the str_between family
 #' @param chr function name
 str_between_factory <- function(fns){
   function(x, left, right) {
-    eval(call(fns, x, glue::glue('(?<={left})(.*)(?={right})')))
+    eval(rlang::call2(.fn = fns, x, 
+                      stringr::str_glue('(?<={left})(.*)(?={right})'), 
+                      .ns = "stringr"))
   }
 }
 
